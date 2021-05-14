@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bzt-u5-Oc7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Drawing-->
+        <scene sceneID="sfN-wf-gNo">
+            <objects>
+                <viewController id="xvv-dt-vcP" customClass="DrawingViewController" customModule="MobileApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Qr-Yi-uQ7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BC1-Zb-wep">
+                                <rect key="frame" x="128.5" y="64" width="157" height="32"/>
+                                <segments>
+                                    <segment title="Графік"/>
+                                    <segment title="Діаграма"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlValueChanged:" destination="xvv-dt-vcP" eventType="valueChanged" id="NkI-mw-ydC"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HBd-m7-t5U" customClass="DrawingView" customModule="MobileApplication" customModuleProvider="target">
+                                <rect key="frame" x="10" y="105" width="394" height="698"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PnH-dq-AwS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HBd-m7-t5U" firstAttribute="top" secondItem="BC1-Zb-wep" secondAttribute="bottom" constant="10" id="Btk-GU-alL"/>
+                            <constraint firstItem="BC1-Zb-wep" firstAttribute="centerX" secondItem="7Qr-Yi-uQ7" secondAttribute="centerX" id="KBe-tD-OPF"/>
+                            <constraint firstItem="BC1-Zb-wep" firstAttribute="top" secondItem="PnH-dq-AwS" secondAttribute="top" constant="20" id="XP6-Rc-eYd"/>
+                            <constraint firstItem="HBd-m7-t5U" firstAttribute="leading" secondItem="PnH-dq-AwS" secondAttribute="leading" constant="10" id="iAY-yb-0Ww"/>
+                            <constraint firstItem="PnH-dq-AwS" firstAttribute="trailing" secondItem="HBd-m7-t5U" secondAttribute="trailing" constant="10" id="s1l-0P-tpV"/>
+                            <constraint firstItem="PnH-dq-AwS" firstAttribute="bottom" secondItem="HBd-m7-t5U" secondAttribute="bottom" constant="10" id="wcf-nT-7jx"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Drawing" image="pencil.tip" catalog="system" id="NON-ir-6de"/>
+                    <connections>
+                        <outlet property="drawingView" destination="HBd-m7-t5U" id="qX9-lh-sMc"/>
+                        <outlet property="segmentedController" destination="BC1-Zb-wep" id="O2O-qa-NsW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="opv-05-1TL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="742" y="157"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="piy-eJ-VAS">
+            <objects>
+                <viewController id="7Ci-jw-8FA" customClass="ViewController" customModule="MobileApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yAb-IK-CkL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAK-dd-B78">
+                                <rect key="frame" x="139" y="417.5" width="136.5" height="61"/>
+                                <string key="text">Сапбиєв Максим
+Група ІП-84
+ЗК іп-8419</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wpg-Jy-8Zh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YAK-dd-B78" firstAttribute="centerX" secondItem="yAb-IK-CkL" secondAttribute="centerX" id="fRn-rl-p3k"/>
+                            <constraint firstItem="YAK-dd-B78" firstAttribute="centerY" secondItem="yAb-IK-CkL" secondAttribute="centerY" id="hMH-yo-skn"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="About" image="person" catalog="system" id="WRJ-Zb-DS6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ryp-3d-ZEa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="741" y="-450"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="z94-sr-FFf">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3yc-U6-p59" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tabBarController id="bzt-u5-Oc7" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7yN-DH-jZC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="7Ci-jw-8FA" kind="relationship" relationship="viewControllers" id="C6F-u8-Vhp"/>
+                        <segue destination="xvv-dt-vcP" kind="relationship" relationship="viewControllers" id="Tpo-sN-ihl"/>
+                    </connections>
+                </tabBarController>
+            </objects>
+            <point key="canvasLocation" x="-151" y="-147"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pencil.tip" catalog="system" width="99" height="128"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
